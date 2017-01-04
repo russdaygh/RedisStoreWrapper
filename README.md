@@ -11,8 +11,8 @@ var objects =
 
 var builder = new RedisStoreBuilder<MyType>(
         new SearchTerm<MyType>("Id", o => o.Id.ToString()),
-        new RedisEndpoint("saprototype.redis.cache.windows.net", 6380,
-            "f4q0JF37gE8J3isOD2pNv28vMpY2/62Pq4w5wpOlwL0=")
+        new RedisEndpoint("hostname", 6380,
+            "password")
         {
             Ssl = true
         })
