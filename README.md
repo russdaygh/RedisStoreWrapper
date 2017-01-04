@@ -25,7 +25,7 @@ var store = builder.Build();
 ```csharp
 var object1 = store.Find(1);
 ```
-### Search By Term
+#### Search By Term
 ```csharp
 var objectsBetween50And60 = store.Search("Name", "Object 5");
 ```
