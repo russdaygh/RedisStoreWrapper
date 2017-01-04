@@ -1,0 +1,12 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "ServiceStack.Redis": "4.5.4"
+  },
+
+    "frameworks": {
+        "net45": {},
+        "net46": {}
+    }
+}
