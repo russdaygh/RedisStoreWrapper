@@ -24,10 +24,7 @@ namespace RedisStoreWrapper
         private string CreateKey(string keyValue) => $"{_keyPrefix}:{_secondarySearchTerm.PropertyName}:{keyValue}";
         private string CreateScanPattern(string value) => CreateKey($"*{value}*");
 
-        public void Add(T item)
-        {
-            _client[CreateKey(_secondarySearchTerm.ValueSelector(item))] = _primarySearchTerm.ValueSelector(item);
-        }
+        public void Add(T item) => _client[CreateKey(_secondarySearchTerm.ValueSelector(item))] = _primarySearchTerm.ValueSelector(item);
 
         public void Add(IEnumerable<T> items)
         {
@@ -37,14 +34,8 @@ namespace RedisStoreWrapper
             }
         }
 
-        public IEnumerable<string> SearchKeys(string value)
-        {
-            return _client.GetKeysByPattern(CreateScanPattern(value));
-        }
+        public IEnumerable<string> SearchKeys(string value) => _client.GetKeysByPattern(CreateScanPattern(value));
 
-        public IEnumerable<string> Find(IEnumerable<string> keys)
-        {
-            return _client.GetValues<string>(keys.ToList());
-        }
+        public IEnumerable<string> Find(IEnumerable<string> keys) => _client.GetValues<string>(keys.ToList());
     }
 }

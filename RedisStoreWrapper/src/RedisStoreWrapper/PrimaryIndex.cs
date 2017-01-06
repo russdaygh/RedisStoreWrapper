@@ -22,10 +22,7 @@ namespace RedisStoreWrapper
 
         private string CreatePrimaryKey(string primaryKeyValue) => $"{_keyPrefix}:primaryKey:{primaryKeyValue}";
 
-        public void Add(T item)
-        {
-            _client[CreatePrimaryKey(_searchTerm.ValueSelector(item))] = item.ToJson();
-        }
+        public void Add(T item) => _client[CreatePrimaryKey(_searchTerm.ValueSelector(item))] = item.ToJson();
 
         public void Add(IEnumerable<T> items)
         {
