@@ -3,14 +3,6 @@ using System.Linq;
 
 namespace RedisStoreWrapper
 {
-    public interface IRedisStore<T>
-    {
-        void Add(T item);
-        void Add(IEnumerable<T> items);
-        T Find(object key);
-        IEnumerable<T> Search(string propertyName, object value);
-    }
-
     internal class RedisStore<T> : IRedisStore<T>
     {
         private readonly IPrimaryIndex<T> _primaryIndex;
