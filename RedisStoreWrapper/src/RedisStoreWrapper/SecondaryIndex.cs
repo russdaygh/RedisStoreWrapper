@@ -22,6 +22,7 @@ namespace RedisStoreWrapper
         public string PropertyName => _secondarySearchTerm.PropertyName;
 
         private string CreateKey(string keyValue) => $"{_keyPrefix}:{_secondarySearchTerm.PropertyName}:{keyValue}";
+
         private string CreateScanPattern(string value) => CreateKey($"*{value}*");
 
         public void Add(T item) => _client[CreateKey(_secondarySearchTerm.ValueSelector(item))] = _primarySearchTerm.ValueSelector(item);
