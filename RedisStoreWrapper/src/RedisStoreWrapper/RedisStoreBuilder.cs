@@ -2,7 +2,7 @@
 using System.Linq;
 using ServiceStack.Redis;
 
-namespace RedisSandbox
+namespace RedisStoreWrapper
 {
     public class RedisStoreBuilder<T>
     {

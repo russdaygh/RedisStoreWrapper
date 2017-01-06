@@ -3,7 +3,7 @@ using System.Linq;
 using ServiceStack;
 using ServiceStack.Redis;
 
-namespace RedisSandbox
+namespace RedisStoreWrapper
 {
     internal class PrimaryIndex<T> : IPrimaryIndex<T>
     {

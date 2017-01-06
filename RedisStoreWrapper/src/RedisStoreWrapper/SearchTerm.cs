@@ -1,6 +1,6 @@
 using System;
 
-namespace RedisSandbox
+namespace RedisStoreWrapper
 {
     public struct SearchTerm<T>
     {

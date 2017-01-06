@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace RedisSandbox
+namespace RedisStoreWrapper
 {
     internal interface ISecondaryIndex<T> : IIndex<T>
     {

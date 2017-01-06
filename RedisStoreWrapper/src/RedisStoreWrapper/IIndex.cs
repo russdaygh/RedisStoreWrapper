@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace RedisSandbox
+namespace RedisStoreWrapper
 {
     // ReSharper disable once TypeParameterCanBeVariant
     internal interface IIndex<T>

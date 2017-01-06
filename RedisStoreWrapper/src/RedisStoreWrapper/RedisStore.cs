@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace RedisSandbox
+namespace RedisStoreWrapper
 {
     public interface IRedisStore<T>
     {
