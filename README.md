@@ -10,7 +10,7 @@ var objects =
         .ToList();
 
 var builder = new RedisStoreBuilder<MyType>(
-        new SearchTerm<MyType>("Id", o => o.Id.ToString()),
+        primarySearchTerm: new SearchTerm<MyType>("Id", o => o.Id.ToString()),
         new RedisEndpoint("hostname", 6380,
             "password")
         {
