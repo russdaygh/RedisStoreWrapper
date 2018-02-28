@@ -27,5 +27,5 @@ var object1 = store.Find(1);
 ```
 #### Search By Term
 ```csharp
-var objectsBetween50And60 = store.Search("Name", "Object 5");
+var object5 = store.Search("Name", "Object 5");
 ```
